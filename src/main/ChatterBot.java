@@ -124,8 +124,13 @@ public class ChatterBot {
 		System.out.println(searches);
 		for(int r = 0;r<searches.size();r++) {
 			for(int i = 0;i<hash.size();i++) {
+				System.out.println(hash.get(i) + "1" + i);
+				System.out.println(searches.get(r) + "2" + r);
 				if(hash.get(i).equals(searches.get(r))) {
 					searches.remove(r);
+				}
+				if(searches.size() == 0) {
+					break;
 				}
 			}
 		}
